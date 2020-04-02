@@ -182,9 +182,33 @@ p{
     height: 40vh;
 }
 
+.testimonials-items:first-child{
+    position: relative;
+    z-index: 10;
+}
+
+.testimonials-items:first-child::before{
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-image: url(images/bg-quotes.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top:-30px;
+    left:-55px;
+    z-index: -10;
+}
+
+
+.testimonials-items:hover:first-child::before{
+    
+        transform: none;
+    
+}
 .testimonials-items:hover{
-    transform: scale(1);
-    box-shadow: 8px 8px 20px hsl(219, 33%, 44%);
+    
+    background-color:  hsl(219, 33%, 44%);
+    box-shadow: 4px 4px 10px hsl(219, 30%, 18%);
 }
 
 .identity{
